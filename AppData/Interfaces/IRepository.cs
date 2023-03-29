@@ -16,7 +16,5 @@ namespace AppData.Interfaces
         public void RemoveResourceShortage(ResourceShortage resourceShortage);
 
         public void ReplaceResourceShortageAt(int index, ResourceShortage resourceShortageReplacement);
-
-        public void SaveDataToJson();
     }
 }

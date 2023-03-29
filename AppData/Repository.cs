@@ -7,7 +7,7 @@ namespace AppData
 {
     public class Repository : IRepository
     {
-        private const string _jsonFileName = (@"..\..\..\" + "ResourceShortageData.json");
+        private const string _jsonFileName = (@"..\..\..\..\AppData\" + "ResourceShortageData.json");
 
         public const int NotInStructure = -1;
 
@@ -29,6 +29,7 @@ namespace AppData
             if (shortageResource != null)
             {
                 _shortageResources.Add(shortageResource);
+                SaveDataToJson();
             }
         }
 
@@ -44,6 +45,7 @@ namespace AppData
             if (resourceIndex != NotInStructure)
             {
                 _shortageResources.RemoveAt(resourceIndex);
+                SaveDataToJson();
             }
         }
 
@@ -60,6 +62,7 @@ namespace AppData
         public void ReplaceResourceShortageAt(int index, ResourceShortage resourceShortageReplacement)
         {
             _shortageResources[index] = resourceShortageReplacement;
+            SaveDataToJson();
         }
 
         public ResourceShortage FindFirstByCondition(Expression<Func<ResourceShortage, bool>> expression)
@@ -72,7 +75,7 @@ namespace AppData
             return _shortageResources.AsQueryable().OrderByDescending(r => r.Priority);
         }
 
-        public void SaveDataToJson()
+        private void SaveDataToJson()
         {
             File.WriteAllText(_jsonFileName, JsonConvert.SerializeObject(_shortageResources));
         }
