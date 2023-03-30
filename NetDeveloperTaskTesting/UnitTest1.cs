@@ -29,10 +29,10 @@ namespace NetDeveloperTaskTesting
             {
                 new ResourceShortage {
                     UserName = _userName,
-                    Title = "title",
+                    Title = "title1",
                     Name = "name",
                     Room = Room.MeetingRoom,
-                    Category = Category.Electronics,
+                    Category = Category.Food,
                     CreatedOn = "2023-01-15",
                     Priority = 1
                 },
@@ -41,8 +41,17 @@ namespace NetDeveloperTaskTesting
                     UserName = _userName,
                     Title = "title2",
                     Name = "name2",
-                    Room = Room.MeetingRoom,
+                    Room = Room.Kitchen,
                     Category = Category.Electronics,
+                    CreatedOn = "2023-02-15",
+                    Priority = 1
+                },
+                new ResourceShortage {
+                    UserName = _userName,
+                    Title = "title two",
+                    Name = "name3",
+                    Room = Room.Bathroom,
+                    Category = Category.Other,
                     CreatedOn = "2023-02-15",
                     Priority = 1
                 }
@@ -59,12 +68,13 @@ namespace NetDeveloperTaskTesting
 
         [TestMethod]
         [DataTestMethod]
-        [DataRow(null, null, null, 0, 0, 2)]
+        [DataRow(null, null, null, 0, 0, 3)]
         [DataRow("title1", null, null, 0, 0, 1)]
-        [DataRow(null, "name2", null, 0, 0, 1)]
+        [DataRow("two", null, null, 0, 0, 1)]
         [DataRow(null, null, null, 1, 0, 1)]
-        [DataRow(null, "2023-01-14", null, 0, 0, 1)]
-        [DataRow(null, "2023-01-15", 0, 0, 1)]
+        [DataRow(null, null, null, 0, 1, 1)]
+        [DataRow(null, "2023-01-15", null, 0, 0, 1)]
+        [DataRow(null, "2023-01-14", "2023-01-16", 0, 0, 1)]
         [DataRow("title1", "2023-01-14", "2023-01-16", 0, 0, 1)]
         public void GetResourceShortage_VariousFilters_CorrectAmount(string title, string date1, string date2, Room room, Category category, int amount)
         {
