@@ -11,7 +11,7 @@ namespace AppData
 
         public const int NotInStructure = -1;
 
-        public List<ResourceShortage> _shortageResources { get; private set; }
+        private List<ResourceShortage> _shortageResources { get; set; }
 
         public Repository()
         {

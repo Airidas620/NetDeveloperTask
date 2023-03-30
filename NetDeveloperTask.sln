@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetDeveloperTask", "NetDeve
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppData", "AppData\AppData.csproj", "{0514F04F-9CC9-4C4D-AE0D-0CF354AC2D6F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDeveloperTaskTesting", "NetDeveloperTaskTesting\NetDeveloperTaskTesting.csproj", "{48A962AB-88ED-40F5-AB07-AFDFC48BD928}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0514F04F-9CC9-4C4D-AE0D-0CF354AC2D6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0514F04F-9CC9-4C4D-AE0D-0CF354AC2D6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0514F04F-9CC9-4C4D-AE0D-0CF354AC2D6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48A962AB-88ED-40F5-AB07-AFDFC48BD928}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48A962AB-88ED-40F5-AB07-AFDFC48BD928}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48A962AB-88ED-40F5-AB07-AFDFC48BD928}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48A962AB-88ED-40F5-AB07-AFDFC48BD928}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
