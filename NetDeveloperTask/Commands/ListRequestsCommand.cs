@@ -55,7 +55,7 @@ namespace NetDeveloperTask.Commands
 
             result.ForEach(x => Console.WriteLine(x + "\n"));
 
-            if(result.Count == 0)
+            if (result.Count == 0)
             {
                 Console.WriteLine("No resources have been found");
             }

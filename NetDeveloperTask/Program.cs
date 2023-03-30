@@ -18,7 +18,7 @@ namespace NetDeveloperTask
 
             var commandService = new CommandService(repository, validator);
 
-            Console.WriteLine("Welcome to Resource shortage management app. \nType help to list available commands");
+            Console.WriteLine("Welcome to the resource shortage management app. \nType help to list the available commands.");
 
             while (true)
             {
