@@ -12,11 +12,11 @@ namespace NetDeveloperTask.Commands
         [Option('t', "title", Required = false, HelpText = "Filter with the title of the shortage registration.")]
         public string Title { get; set; }
 
-        [Option("d1", Required = false, HelpText = "Date one. Specify d1 to find resource at particular date" +
+        [Option("d1", Required = false, HelpText = "Date one. Specify d1 to find resource at particular date " +
             "or specify two dates to find resources in the interval of those days. Format: yyyy-mm-dd")]
         public string Date1 { get; set; }
 
-        [Option("d2", Required = false, HelpText = "Date two. Specify d2 to find resource at particular date" +
+        [Option("d2", Required = false, HelpText = "Date two. Specify d2 to find resource at particular date " +
             "or specify two dates to find resources in the interval of those days. Format: yyyy-mm-dd")]
         public string Date2 { get; set; }
 

@@ -5,7 +5,7 @@ namespace AppData.Interfaces
 {
     public interface IRepository
     {
-        IQueryable<ResourceShortage> FindAllOrderedPriority();
+        public IQueryable<ResourceShortage> FindAllOrderedPriority();
 
         public ResourceShortage FindFirstByCondition(Expression<Func<ResourceShortage, bool>> expression);
 
